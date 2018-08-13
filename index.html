@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="dist/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/jquery.js"></script>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: #4E5F97;
+        color: #fff;
+    }
+    
+    .row {
+        background-color: rgb(58, 58, 58);
+    }
+    .row.vdivide [class*='col-']:not(:last-child):after {
+        background: #7E9CFD;
+        width: 5px;
+        content: "";
+        display:block;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right: 0;
+        min-height: 70px;
+    }
+    .row.v2divide [class*='col-']:not(:last-child):after {
+        background: #4E5F97;
+        width: 7px;
+        content: "";
+        display:block;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right: 0;
+        min-height: 70px;
+    }
+    @media (max-width:768px){
+        .row.vdivide [class*='col-']:not(:last-child):after {
+            width: 0px;
+        }
+        .row.v2divide [class*='col-']:not(:last-child):after {
+            width: 0px;
+        }
+    }
+    .sub_head {
+        padding: 4vw;
+    }
+    
+    .up_head {
+        border: 10px solid #7E9CFD;
+    }
+    
+    .mtop {
+        margin-top: 10vw;
+    }
+    .columnDivider {
+        border-right: 1px solid red;
+        padding-right: 10px;
+    }
+    .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction:row-reverse;
+    }
+    .section_content {
+        padding: 10vw;
+    }
+    .footer_content {
+        padding: 12vw;
+    }
+    @keyframes cores {
+        0%   {color: rgb(241, 36, 248);}
+        25%  {color: rgb(25, 241, 79);}
+        50%  {color: rgb(36, 36, 255);}
+        100% {color: #fff;}
+    }
+    .footer_col_size{
+        -o-animation:cores 10s infinite; 
+        animation:cores 10s infinite;
+    }
+</style>
+<header>
+    <div class="container mtop">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 up_head" style="background-color:green">
+                <div class="row vdivide">
+
+                    <div class="sub_head col-sm-6 col-xs-6" style="background-color:#741B51">.col-sm-6</div>
+                    <div class="sub_head col-sm-6 col-xs-6" style="background-color:#C5C5C5">.col-sm-6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <section>
+        <div class="container mtop">
+            <div class="row v2divide">
+                <div class="section_content col-sm-4 col-xs-4" style="background-color:#7FFFB0">.col-sm-4</div>
+                <div class="section_content col-sm-4 col-xs-4" style="background-color:#FF9680">.col-sm-4</div>
+                <div class="section_content col-sm-4 col-xs-4" style="background-color:#DCFF7F">.col-sm-4</div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <div class="container mtop">
+        <div class="row">
+            <div class="footer_content col-sm-12 col-xs-12" style="background-color:#7F9DFF">.col-sm-12</div>
+        </div>
+    </div>
+    <div class="container mtop">
+        <div class="row">
+            <div class="footer_content col-sm-12 col-xs-12" style="background-color:#7F9DFF">
+                <div class="row row-eq-height">
+                    <div class="footer_content col-sm-6 col-xs-6" style="background-color:#7FFFB0">.col-sm-6
+                        <div class="row">
+                            <div class="footer_col_size col-sm-12" style="background-color:#741B51">.col-sm-12</div>
+                        </div>
+                            <div class="row">
+                            <div class="footer_col_size col-sm-12" style="background-color:#C5C5C5">.col-sm-12</div>
+                            </div>
+                        
+                    </div>
+                    <div class="footer_content col-sm-6 col-xs-6" style="background-color:#FF9680">.col-sm-6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
