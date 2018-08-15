@@ -85,5 +85,8 @@
       "fonts",
       "js"
     ]
+  },
+  "dependencies": {
+    "gsap": "^2.0.1"
   }
 }
